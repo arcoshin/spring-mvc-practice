@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!--所有配置內容寫在這個標籤內-->
+<mapper namespace="com.tedu.weibopractice1.mapper.CommentMapper">
+    <select id="selectByWeiboId" resultType="com.tedu.weibopractice1.pojo.vo.CommentVO">
+        SELECT c.id,u.nickname,c.content,c.created FROM comment c
+        JOIN user u ON c.user_id=u.id
+        JOIN weibo w ON c.weibo_id=w.id
+        WHERE w.id=#{id}
+    </select>
+</mapper>
