@@ -4,7 +4,7 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <!--所有配置內容寫在這個標籤內-->
-<mapper namespace="com.tedu.weibopractice1.mapper.WeiboMapper">
+<mapper namespace="com.tedu.weibopractice1.WeiboMapper">
     <!--微博列表-->
     <select id="selectIndex" resultType="com.tedu.weibopractice1.pojo.vo.WeiboVO">
         SELECT w.id,w.content,u.nickname

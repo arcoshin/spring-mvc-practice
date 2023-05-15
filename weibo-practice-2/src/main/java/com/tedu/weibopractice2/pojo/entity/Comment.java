@@ -1,10 +1,13 @@
 package com.tedu.weibopractice2.pojo.entity;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import java.util.Date;
 
 public class Comment {
     private Integer id;
     private String content;
+    @JsonFormat(pattern = "yyyy/MM/dd HH:mm:SS",timezone = "GMT+8")
     private Date created;
     private Integer userId;
     private Integer weiboId;

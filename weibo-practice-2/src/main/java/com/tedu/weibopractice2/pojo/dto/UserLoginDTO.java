@@ -1,34 +1,17 @@
-package com.tedu.weibopractice2.pojo.entity;
+package com.tedu.weibopractice2.pojo.dto;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
-
-import java.util.Date;
-
-public class User {
-    private Integer id;
+public class UserLoginDTO {
     private String username;
     private String password;
     private String nickname;
-    @JsonFormat(pattern = "yyyy/MM/dd HH:mm:SS",timezone = "GMT+8")
-    private Date created;
 
     @Override
     public String toString() {
-        return "User{" +
-                "id=" + id +
-                ", username='" + username + '\'' +
+        return "UserRegDTO{" +
+                "username='" + username + '\'' +
                 ", password='" + password + '\'' +
                 ", nickname='" + nickname + '\'' +
-                ", created=" + created +
                 '}';
-    }
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
     }
 
     public String getUsername() {
@@ -53,13 +36,5 @@ public class User {
 
     public void setNickname(String nickname) {
         this.nickname = nickname;
-    }
-
-    public Date getCreated() {
-        return created;
-    }
-
-    public void setCreated(Date created) {
-        this.created = created;
     }
 }

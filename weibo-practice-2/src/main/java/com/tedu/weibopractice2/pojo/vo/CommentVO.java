@@ -1,23 +1,21 @@
-package com.tedu.weibopractice2.pojo.entity;
+package com.tedu.weibopractice2.pojo.vo;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 
 import java.util.Date;
 
-public class User {
+public class CommentVO {
     private Integer id;
-    private String username;
-    private String password;
+    private String content;
     private String nickname;
     @JsonFormat(pattern = "yyyy/MM/dd HH:mm:SS",timezone = "GMT+8")
     private Date created;
 
     @Override
     public String toString() {
-        return "User{" +
+        return "CommentVO{" +
                 "id=" + id +
-                ", username='" + username + '\'' +
-                ", password='" + password + '\'' +
+                ", content='" + content + '\'' +
                 ", nickname='" + nickname + '\'' +
                 ", created=" + created +
                 '}';
@@ -31,20 +29,12 @@ public class User {
         this.id = id;
     }
 
-    public String getUsername() {
-        return username;
+    public String getContent() {
+        return content;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
+    public void setContent(String content) {
+        this.content = content;
     }
 
     public String getNickname() {
