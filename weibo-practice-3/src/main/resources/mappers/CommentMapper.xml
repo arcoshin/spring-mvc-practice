@@ -5,4 +5,14 @@
 
 <!--所有配置內容寫在這個標籤內-->
 <mapper namespace="com.tedu.weibopractice3.mapper.CommentMapper">
+    <insert id="insert">
+        INSERT INTO comment
+        VALUES (NULL ,#{content},#{created},#{userId},#{weiboId})
+    </insert>
+    <select id="selectByWeiboId" resultType="com.tedu.weibopractice3.pojo.vo.CommentVO">
+        SELECT c.id,c.content,c.created,u.nickname
+        FROM comment c
+        JOIN user u ON c.user_id = u.id
+        WHERE c.weibo_id = #{id}
+    </select>
 </mapper>

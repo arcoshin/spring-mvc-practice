@@ -5,4 +5,12 @@
 
 <!--所有配置內容寫在這個標籤內-->
 <mapper namespace="com.tedu.weibopractice3.mapper.UserMapper">
+    <select id="selectByUsername" resultType="com.tedu.weibopractice3.pojo.vo.UserVO">
+        SELECT id,nickname,password FROM user
+        WHERE username = #{username}
+    </select>
+
+    <insert id="insert">
+        INSERT INTO user VALUES (NULL ,#{username},#{password},#{nickname},#{created})
+    </insert>
 </mapper>

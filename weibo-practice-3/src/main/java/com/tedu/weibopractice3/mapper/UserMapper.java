@@ -1,8 +1,11 @@
 package com.tedu.weibopractice3.mapper;
 
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import com.tedu.weibopractice3.pojo.entity.User;
+import com.tedu.weibopractice3.pojo.vo.UserVO;
 
-@RestController
-public class UserMapper {
+public interface UserMapper {
+
+    UserVO selectByUsername(String username);
+
+    Integer insert(User user);
 }

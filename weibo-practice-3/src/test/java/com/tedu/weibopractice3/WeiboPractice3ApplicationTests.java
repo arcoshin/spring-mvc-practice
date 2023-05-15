@@ -1,5 +1,8 @@
 package com.tedu.weibopractice3;
 
+import com.tedu.weibopractice3.mapper.CommentMapper;
+import com.tedu.weibopractice3.mapper.UserMapper;
+import com.tedu.weibopractice3.pojo.entity.Comment;
 import org.apache.ibatis.session.SqlSession;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

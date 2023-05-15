@@ -1,7 +1,15 @@
 package com.tedu.weibopractice3.mapper;
 
-import org.springframework.web.bind.annotation.RestController;
+import com.tedu.weibopractice3.pojo.entity.Weibo;
+import com.tedu.weibopractice3.pojo.vo.WeiboDetailVO;
+import com.tedu.weibopractice3.pojo.vo.WeiboIndexVO;
 
-@RestController
-public class WeiboMapper {
+import java.util.List;
+
+public interface WeiboMapper {
+    Integer insert(Weibo weibo);
+
+    List<WeiboIndexVO> selectIndex();
+
+    WeiboDetailVO selectById(int id);
 }
